@@ -12,13 +12,13 @@ You also need:
 
 ##Syntax
 ```
-./wp_install.sh <packages> <additional_packages>
+sudo ./wp_install.sh <packages> <additional_packages>
 ```
 ##Explenation
 
 If you want to install the full lamp stack (apache2, mysql-server and php5) and phpmyadmin type the following:
 ```
-./wp_install.sh lamp p
+sudo ./wp_install.sh lamp p
 ```
 Actually you can littery type anything. but it checks for a a,m and p in the first parameter and a p in the second parameter.
 
