@@ -8,17 +8,26 @@ You also need:
   apt:  installing the lamp stack
   wget: downloading WordPress
 
+#Tip
+
+```
+mv wp-install.sh /bin/wp-install
+```
+
+Then you can easy type wp-install in the terminal from every directory, to run the script
+
+
 #Usage
 
 ##Syntax
 ```
-sudo ./wp_install.sh <packages> <additional_packages>
+sudo wp-install <packages> <additional_packages>
 ```
 ##Explenation
 
 If you want to install the full lamp stack (apache2, mysql-server and php5) and phpmyadmin type the following:
 ```
-sudo ./wp_install.sh lamp p
+sudo wp-install lamp p
 ```
 Actually you can littery type anything. but it checks for a a,m and p in the first parameter and a p in the second parameter.
 
