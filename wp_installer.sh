@@ -42,6 +42,14 @@ else
 	iph=false
 fi
 
+#install wp-cli?
+if [[ $addpac == *"w"* ]]
+then
+	wpcli=true
+else
+	wpcli=false
+fi
+
 }
 
 #does the parameters has a value?
@@ -126,6 +134,19 @@ function installpacs {
 		wl "installing phpmyadmin"
 		apt-get install phpmyadmin
 		wl "installed phpmyadmin"
+	fi
+	
+
+	if [[ $wpcli == true ]]
+	then
+		wl "installing wp-cli"
+		wl "downloading wp-cli"
+		curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+ 		wl "make wp-cli executable"
+		chmod +x wp-cli.phar
+		wl "move wp-cli"
+		mv wp.phar /bin/wp
+		wl "installed wp-cli"
 	fi
 	
 	
